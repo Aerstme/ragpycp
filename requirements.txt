@@ -1,3 +1,5 @@
 django
 mysqlclient
 mysql-connector-python
+django-background-tasks
+requests
