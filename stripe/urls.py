@@ -13,25 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
-from ragcp.views import index, forbidden
-from django.conf.urls import url
+from django.urls import path
 
-app_name = 'ragcp'
+from stripe.views import StripeAuthorizeView, StripeAuthorizeCallbackView
+
+app_name = 'stripe'
 
 urlpatterns = [
-
-    path('admin/', admin.site.urls),
-
-    url(r'^$', index, name='index'),
-
-    url('403/', forbidden, name='forbidden'),
-
-    path('users/', include('users.urls')),  # new
-    path('users/', include('django.contrib.auth.urls')),  # new
-    path('char/', include('char.urls')),
-    path('stripe/', include('stripe.urls')),
-    path('content/', include('content.urls')),
-
+    path('authorize/', StripeAuthorizeView.as_view(), name='authorize'),
+    path('oauth/callback/', StripeAuthorizeCallbackView.as_view(), name='authorize_callback'),
 ]
