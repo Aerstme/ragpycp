@@ -81,6 +81,18 @@ WSGI_APPLICATION = 'ragcp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'ragnarok',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         # 'PASSWORD': '7DtMAZ5YHEUpkq5j',
+#         'HOST': '0.0.0.0',
+#         'PORT': '32768',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -89,7 +101,7 @@ DATABASES = {
         'PASSWORD': 'root',
         # 'PASSWORD': '7DtMAZ5YHEUpkq5j',
         'HOST': '0.0.0.0',
-        'PORT': '32768',
+        'PORT': '32769',
     }
 }
 
@@ -118,7 +130,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 STRIPE_PUBLISHABLE_KEY = '<your test publishable key here>'
 STRIPE_SECRET_KEY = '<your test secret key here>'
-STRIPE_CONNECT_CLIENT_ID = '<your test connect client id here>'
+STRIPE_CONNECT_CLIENT_ID = 'ca_Fn7WYpNSelTC87rz1C6jrxjdPUSITxq4'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
