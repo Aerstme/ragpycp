@@ -1,0 +1,4 @@
+[submodule "wallet"]
+	path = wallet
+	url = git@github.com:Freyja-Folkvangr/service-my-wallet-v3.git
+	branch = master
